@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Title | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Awesome summary" />
+<meta property="og:description" content="Awesome summary" />
+<link rel="canonical" href="https://yusefan.github.io/misc_analytics/fastpages/jupyter/2021/12/29/SPEC_Analysis.html" />
+<meta property="og:url" content="https://yusefan.github.io/misc_analytics/fastpages/jupyter/2021/12/29/SPEC_Analysis.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://yusefan.github.io/misc_analytics/images/some_folder/your_image.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-29T00:00:00-06:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://yusefan.github.io/misc_analytics/images/some_folder/your_image.png" />
+<meta property="twitter:title" content="Title" />
+<script type="application/ld+json">
+{"url":"https://yusefan.github.io/misc_analytics/fastpages/jupyter/2021/12/29/SPEC_Analysis.html","@type":"BlogPosting","headline":"Title","dateModified":"2021-12-29T00:00:00-06:00","datePublished":"2021-12-29T00:00:00-06:00","image":"https://yusefan.github.io/misc_analytics/images/some_folder/your_image.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://yusefan.github.io/misc_analytics/fastpages/jupyter/2021/12/29/SPEC_Analysis.html"},"description":"Awesome summary","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/misc_analytics/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yusefan.github.io/misc_analytics/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/misc_analytics/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/misc_analytics/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/misc_analytics/about/">About Me</a><a class="page-link" href="/misc_analytics/search/">Search</a><a class="page-link" href="/misc_analytics/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="page-description">Awesome summary</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-29T00:00:00-06:00" itemprop="datePublished">
+        Dec 29, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/misc_analytics/categories/#fastpages">fastpages</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/misc_analytics/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/YusefAN/misc_analytics/tree/master/_notebooks/2021-12-29-SPEC_Analysis.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/misc_analytics/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/YusefAN/misc_analytics/master?filepath=_notebooks%2F2021-12-29-SPEC_Analysis.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/misc_analytics/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/YusefAN/misc_analytics/blob/master/_notebooks/2021-12-29-SPEC_Analysis.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/misc_analytics/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FYusefAN%2Fmisc_analytics%2Fblob%2Fmaster%2F_notebooks%2F2021-12-29-SPEC_Analysis.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/misc_analytics/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-12-29-SPEC_Analysis.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://colab.research.google.com/github/YusefAN/misc_analytics/blob/master/_notebooks/2021-12-29-SPEC_Analysis.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">from</span> <span class="nn">plotly.subplots</span> <span class="kn">import</span> <span class="n">make_subplots</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="o">%</span><span class="n">load_ext</span> <span class="n">rpy2</span><span class="o">.</span><span class="n">ipython</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The rpy2.ipython extension is already loaded. To reload it, use:
+  %reload_ext rpy2.ipython
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="c1">#@title</span>
+<span class="c1">#Read in how many </span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;https://api.flipsidecrypto.com/api/v2/queries/32103678-d588-4c7b-8f5c-3e0d0d141274/data/latest&#39;</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;float_format&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{:f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">]</span><span class="o">&gt;=</span><span class="s1">&#39;2021-01-10&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;UST_DEPOSITS&#39;</span><span class="p">]</span><span class="o">=</span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;UST_DEPOSITS&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;UST_DEPOSITS&#39;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;SPEC Deposits Daily (UST)&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="4eb501e7-2f94-4017-8b6b-b6bf37a3cdf2" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("4eb501e7-2f94-4017-8b6b-b6bf37a3cdf2")) {
+                    Plotly.newPlot(
+                        '4eb501e7-2f94-4017-8b6b-b6bf37a3cdf2',
+                        [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "DT_DAY=%{x}<br>UST_DEPOSITS=%{y}", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": ["2021-06-29T00:00:00", "2021-06-30T00:00:00", "2021-07-01T00:00:00", "2021-07-02T00:00:00", "2021-07-03T00:00:00", "2021-07-04T00:00:00", "2021-07-05T00:00:00", "2021-07-06T00:00:00", "2021-07-07T00:00:00", "2021-07-08T00:00:00", "2021-07-09T00:00:00", "2021-07-10T00:00:00", "2021-07-11T00:00:00", "2021-07-12T00:00:00", "2021-07-13T00:00:00", "2021-07-14T00:00:00", "2021-07-15T00:00:00", "2021-07-16T00:00:00", "2021-07-17T00:00:00", "2021-07-18T00:00:00", "2021-07-19T00:00:00", "2021-07-20T00:00:00", "2021-07-21T00:00:00", "2021-07-22T00:00:00", "2021-07-23T00:00:00", "2021-07-24T00:00:00", "2021-07-25T00:00:00", "2021-07-26T00:00:00", "2021-07-27T00:00:00", "2021-07-28T00:00:00", "2021-07-29T00:00:00", "2021-07-30T00:00:00", "2021-07-31T00:00:00", "2021-08-01T00:00:00", "2021-08-02T00:00:00", "2021-08-03T00:00:00", "2021-08-04T00:00:00", "2021-08-05T00:00:00", "2021-08-06T00:00:00", "2021-08-07T00:00:00", "2021-08-08T00:00:00", "2021-08-09T00:00:00", "2021-08-10T00:00:00", "2021-08-11T00:00:00", "2021-08-12T00:00:00", "2021-08-13T00:00:00", "2021-08-14T00:00:00", "2021-08-15T00:00:00", "2021-08-16T00:00:00", "2021-08-17T00:00:00", "2021-08-18T00:00:00", "2021-08-19T00:00:00", "2021-08-20T00:00:00", "2021-08-21T00:00:00", "2021-08-22T00:00:00", "2021-08-23T00:00:00", "2021-08-24T00:00:00", "2021-08-25T00:00:00", "2021-08-26T00:00:00", "2021-08-27T00:00:00", "2021-08-28T00:00:00", "2021-08-29T00:00:00", "2021-08-30T00:00:00", "2021-08-31T00:00:00", "2021-09-01T00:00:00", "2021-09-02T00:00:00", "2021-09-03T00:00:00", "2021-09-04T00:00:00", "2021-09-05T00:00:00", "2021-09-06T00:00:00", "2021-09-07T00:00:00", "2021-09-08T00:00:00", "2021-09-09T00:00:00", "2021-09-10T00:00:00", "2021-09-11T00:00:00", "2021-09-12T00:00:00", "2021-09-13T00:00:00", "2021-09-14T00:00:00", "2021-09-15T00:00:00", "2021-09-16T00:00:00", "2021-09-17T00:00:00", "2021-09-18T00:00:00", "2021-09-19T00:00:00", "2021-09-20T00:00:00", "2021-09-21T00:00:00", "2021-09-22T00:00:00", "2021-09-23T00:00:00", "2021-09-24T00:00:00", "2021-09-25T00:00:00", "2021-09-26T00:00:00", "2021-09-27T00:00:00", "2021-09-28T00:00:00", "2021-09-29T00:00:00", "2021-09-30T00:00:00", "2021-10-01T00:00:00", "2021-10-02T00:00:00", "2021-10-03T00:00:00", "2021-10-04T00:00:00", "2021-10-05T00:00:00", "2021-10-06T00:00:00", "2021-10-07T00:00:00", "2021-10-08T00:00:00", "2021-10-09T00:00:00", "2021-10-10T00:00:00", "2021-10-11T00:00:00", "2021-10-12T00:00:00", "2021-10-13T00:00:00", "2021-10-14T00:00:00", "2021-10-15T00:00:00", "2021-10-16T00:00:00", "2021-10-17T00:00:00", "2021-10-18T00:00:00", "2021-10-19T00:00:00", "2021-10-20T00:00:00", "2021-10-21T00:00:00", "2021-10-22T00:00:00", "2021-10-23T00:00:00", "2021-10-24T00:00:00", "2021-10-25T00:00:00", "2021-10-26T00:00:00", "2021-10-27T00:00:00", "2021-10-28T00:00:00", "2021-10-29T00:00:00", "2021-10-30T00:00:00", "2021-10-31T00:00:00", "2021-11-01T00:00:00", "2021-11-02T00:00:00", "2021-11-03T00:00:00", "2021-11-04T00:00:00", "2021-11-05T00:00:00", "2021-11-06T00:00:00", "2021-11-07T00:00:00", "2021-11-08T00:00:00", "2021-11-09T00:00:00", "2021-11-10T00:00:00", "2021-11-11T00:00:00", "2021-11-12T00:00:00", "2021-11-13T00:00:00", "2021-11-14T00:00:00", "2021-11-15T00:00:00", "2021-11-16T00:00:00", "2021-11-17T00:00:00", "2021-11-18T00:00:00", "2021-11-19T00:00:00", "2021-11-20T00:00:00", "2021-11-21T00:00:00", "2021-11-22T00:00:00", "2021-11-23T00:00:00", "2021-11-24T00:00:00", "2021-11-25T00:00:00", "2021-11-26T00:00:00", "2021-11-27T00:00:00", "2021-11-28T00:00:00", "2021-11-29T00:00:00", "2021-11-30T00:00:00", "2021-12-01T00:00:00", "2021-12-02T00:00:00", "2021-12-03T00:00:00", "2021-12-04T00:00:00", "2021-12-05T00:00:00", "2021-12-06T00:00:00", "2021-12-07T00:00:00", "2021-12-08T00:00:00", "2021-12-09T00:00:00", "2021-12-10T00:00:00", "2021-12-11T00:00:00", "2021-12-12T00:00:00", "2021-12-13T00:00:00", "2021-12-14T00:00:00", "2021-12-15T00:00:00", "2021-12-16T00:00:00", "2021-12-17T00:00:00", "2021-12-18T00:00:00", "2021-12-19T00:00:00", "2021-12-20T00:00:00", "2021-12-21T00:00:00", "2021-12-22T00:00:00", "2021-12-23T00:00:00", "2021-12-24T00:00:00", "2021-12-25T00:00:00", "2021-12-26T00:00:00", "2021-12-27T00:00:00"], "xaxis": "x", "y": [29998.57, 112035.52, 547365.53, 135475.88, 105137.53, 663466.96, 182018.99, 653545.19, 707212.26, 418951.79, 295134.17, 427617.35, 617510.78, 601645.17, 331947.75, 460301.16, 328520.42, 633107.87, 183298.65, 128257.72, 89291.79, 113962.6, 194459.12, 65381.31, 124931.83, 191214.25, 210536.57, 237968.01, 285149.07, 227099.42, 542869.02, 262185.2, 168319.75, 358977.04, 362341.7, 400700.19, 2320214.66, 1105483.68, 679693.65, 867328.0, 750286.26, 506995.34, 885713.02, 711213.04, 532829.84, 743075.27, 472479.69, 509231.95, 1486367.02, 5928372.9, 3161280.14, 2023948.82, 2118837.59, 1742775.45, 2917616.37, 2151492.46, 3289913.83, 1224249.44, 1590620.41, 2153772.18, 1995238.67, 1488960.79, 1136423.85, 7456004.21, 1781610.5, 1141847.7, 1809834.63, 861736.69, 1518929.03, 2298375.29, 4445393.28, 4043468.5, 4140948.9, 6697290.6, 4325783.79, 5940078.99, 6042841.03, 5032430.39, 3226981.88, 4464249.41, 3568955.88, 2024971.16, 3749360.86, 3338180.97, 1917688.03, 4770489.55, 2953965.28, 3761099.35, 1988915.07, 2581337.08, 3436715.1, 2435976.23, 1006264.75, 4029183.07, 4164973.87, 4301072.16, 2054801.31, 2896407.46, 2228820.29, 3907286.33, 4047289.03, 3247558.17, 2262163.02, 2252541.93, 3040444.19, 3234760.83, 1620828.35, 4337827.56, 927094.38, 687342.99, 1145769.14, 1548540.74, 751557.73, 3052729.68, 630986.03, 12703917.76, 761522.32, 1644477.25, 1835895.42, 1193249.71, 1911491.63, 32781054.74, 12264405.69, 11273582.04, 17570999.64, 5763481.77, 3832728.72, 4344554.31, 3542340.17, 2187342.65, 6177640.19, 2276413.93, 4333364.06, 2911856.15, 2465967.51, 1174285.88, 1529031.66, 680479.09, 2183028.9, 1401344.16, 457819.03, 837817.86, 514962.69, 633465.77, 1283992.84, 1820897.92, 1376517.01, 714500.68, 1058849.15, 2218423.6, 1537243.2, 588928.32, 1132076.8, 1222085.08, 2284523.79, 1298171.61, 811458.92, 1133655.97, 2318664.24, 2680828.31, 2680849.47, 1721770.95, 1811353.0, 953511.12, 1176117.02, 405902.5, 588018.36, 252678.99, 657089.52, 676775.63, 644169.46, 386614.04, 3320610.88, 934944.66, 878320.29, 2650575.01, 705174.66, 800933.89, 1577754.83, 1274481.79, 960811.4, 801510.42], "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "SPEC Deposits Daily (UST)"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "DT_DAY"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "UST_DEPOSITS"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('4eb501e7-2f94-4017-8b6b-b6bf37a3cdf2');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+</body>
+</html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">monthly</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">monthly</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-46dde396-a1a8-47ca-b310-0bebff5b9a81">
+    <div class="colab-df-container">
+      <div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>index</th>
+      <th>DEPOSIT_COUNT</th>
+      <th>UST_DEPOSITS</th>
+    </tr>
+    <tr>
+      <th>DT_DAY</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>1</td>
+      <td>82</td>
+      <td>142034.090000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>527</td>
+      <td>7672</td>
+      <td>10133883.110000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1488</td>
+      <td>14149</td>
+      <td>53072437.460000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2355</td>
+      <td>18947</td>
+      <td>99334902.990000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>3379</td>
+      <td>25824</td>
+      <td>146281391.390000</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>4185</td>
+      <td>17313</td>
+      <td>62485962.890000</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4536</td>
+      <td>10023</td>
+      <td>34102746.940000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-46dde396-a1a8-47ca-b310-0bebff5b9a81')" title="Convert this dataframe to an interactive table." style="display:none;">
+        
+  &lt;svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px"&gt;
+    <path d="M0 0h24v24H0V0z" fill="none" />
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z" /><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z" />
+  &lt;/svg&gt;
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-46dde396-a1a8-47ca-b310-0bebff5b9a81 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-46dde396-a1a8-47ca-b310-0bebff5b9a81');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fig_2</span><span class="o">=</span><span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">monthly</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">monthly</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;UST_DEPOSITS&#39;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="s1">&#39;Month&#39;</span><span class="p">},</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;SPEC Deposits Monthly (UST)&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">fig_2</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+    <div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG"></script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>
+                <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>    
+            <div id="e3e97a2d-6ff5-41c5-a75d-ea43625044da" class="plotly-graph-div" style="height:525px; width:100%;"></div>
+            <script type="text/javascript">
+                
+                    window.PLOTLYENV=window.PLOTLYENV || {};
+                    
+                if (document.getElementById("e3e97a2d-6ff5-41c5-a75d-ea43625044da")) {
+                    Plotly.newPlot(
+                        'e3e97a2d-6ff5-41c5-a75d-ea43625044da',
+                        [{"alignmentgroup": "True", "hoverlabel": {"namelength": 0}, "hovertemplate": "Month=%{x}<br>UST_DEPOSITS=%{y}", "legendgroup": "", "marker": {"color": "#636efa"}, "name": "", "offsetgroup": "", "orientation": "v", "showlegend": false, "textposition": "auto", "type": "bar", "x": [6, 7, 8, 9, 10, 11, 12], "xaxis": "x", "y": [142034.09, 10133883.109999998, 53072437.45999999, 99334902.98999998, 146281391.39, 62485962.88999999, 34102746.94], "yaxis": "y"}],
+                        {"barmode": "relative", "legend": {"tracegroupgap": 0}, "template": {"data": {"bar": [{"error_x": {"color": "#2a3f5f"}, "error_y": {"color": "#2a3f5f"}, "marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "bar"}], "barpolar": [{"marker": {"line": {"color": "#E5ECF6", "width": 0.5}}, "type": "barpolar"}], "carpet": [{"aaxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "baxis": {"endlinecolor": "#2a3f5f", "gridcolor": "white", "linecolor": "white", "minorgridcolor": "white", "startlinecolor": "#2a3f5f"}, "type": "carpet"}], "choropleth": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "choropleth"}], "contour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "contour"}], "contourcarpet": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "contourcarpet"}], "heatmap": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmap"}], "heatmapgl": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "heatmapgl"}], "histogram": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "histogram"}], "histogram2d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2d"}], "histogram2dcontour": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "histogram2dcontour"}], "mesh3d": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "type": "mesh3d"}], "parcoords": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "parcoords"}], "pie": [{"automargin": true, "type": "pie"}], "scatter": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter"}], "scatter3d": [{"line": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatter3d"}], "scattercarpet": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattercarpet"}], "scattergeo": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergeo"}], "scattergl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattergl"}], "scattermapbox": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scattermapbox"}], "scatterpolar": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolar"}], "scatterpolargl": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterpolargl"}], "scatterternary": [{"marker": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "type": "scatterternary"}], "surface": [{"colorbar": {"outlinewidth": 0, "ticks": ""}, "colorscale": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "type": "surface"}], "table": [{"cells": {"fill": {"color": "#EBF0F8"}, "line": {"color": "white"}}, "header": {"fill": {"color": "#C8D4E3"}, "line": {"color": "white"}}, "type": "table"}]}, "layout": {"annotationdefaults": {"arrowcolor": "#2a3f5f", "arrowhead": 0, "arrowwidth": 1}, "coloraxis": {"colorbar": {"outlinewidth": 0, "ticks": ""}}, "colorscale": {"diverging": [[0, "#8e0152"], [0.1, "#c51b7d"], [0.2, "#de77ae"], [0.3, "#f1b6da"], [0.4, "#fde0ef"], [0.5, "#f7f7f7"], [0.6, "#e6f5d0"], [0.7, "#b8e186"], [0.8, "#7fbc41"], [0.9, "#4d9221"], [1, "#276419"]], "sequential": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]], "sequentialminus": [[0.0, "#0d0887"], [0.1111111111111111, "#46039f"], [0.2222222222222222, "#7201a8"], [0.3333333333333333, "#9c179e"], [0.4444444444444444, "#bd3786"], [0.5555555555555556, "#d8576b"], [0.6666666666666666, "#ed7953"], [0.7777777777777778, "#fb9f3a"], [0.8888888888888888, "#fdca26"], [1.0, "#f0f921"]]}, "colorway": ["#636efa", "#EF553B", "#00cc96", "#ab63fa", "#FFA15A", "#19d3f3", "#FF6692", "#B6E880", "#FF97FF", "#FECB52"], "font": {"color": "#2a3f5f"}, "geo": {"bgcolor": "white", "lakecolor": "white", "landcolor": "#E5ECF6", "showlakes": true, "showland": true, "subunitcolor": "white"}, "hoverlabel": {"align": "left"}, "hovermode": "closest", "mapbox": {"style": "light"}, "paper_bgcolor": "white", "plot_bgcolor": "#E5ECF6", "polar": {"angularaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "radialaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "scene": {"xaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "yaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}, "zaxis": {"backgroundcolor": "#E5ECF6", "gridcolor": "white", "gridwidth": 2, "linecolor": "white", "showbackground": true, "ticks": "", "zerolinecolor": "white"}}, "shapedefaults": {"line": {"color": "#2a3f5f"}}, "ternary": {"aaxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "baxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}, "bgcolor": "#E5ECF6", "caxis": {"gridcolor": "white", "linecolor": "white", "ticks": ""}}, "title": {"x": 0.05}, "xaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}, "yaxis": {"automargin": true, "gridcolor": "white", "linecolor": "white", "ticks": "", "title": {"standoff": 15}, "zerolinecolor": "white", "zerolinewidth": 2}}}, "title": {"text": "SPEC Deposits Monthly (UST)"}, "xaxis": {"anchor": "y", "domain": [0.0, 1.0], "title": {"text": "Month"}}, "yaxis": {"anchor": "x", "domain": [0.0, 1.0], "title": {"text": "UST_DEPOSITS"}}},
+                        {"responsive": true}
+                    ).then(function(){
+                            
+var gd = document.getElementById('e3e97a2d-6ff5-41c5-a75d-ea43625044da');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })
+                };
+                
+            </script>
+        </div>
+</body>
+</html>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">datapane</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Collecting datapane
+  Downloading datapane-0.13.1-py3-none-any.whl (2.6 MB)
+     |████████████████████████████████| 2.6 MB 26.8 MB/s 
+Collecting datacommons-pandas&lt;0.0.4,&gt;=0.0.3
+  Downloading datacommons_pandas-0.0.3-py3-none-any.whl (45 kB)
+     |████████████████████████████████| 45 kB 3.4 MB/s 
+Collecting munch&lt;3.0.0,&gt;=2.3.0
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Collecting jsonschema&lt;5.0.0,&gt;=3.2.0
+  Downloading jsonschema-4.3.2-py3-none-any.whl (71 kB)
+     |████████████████████████████████| 71 kB 193 kB/s 
+Requirement already satisfied: nbconvert&lt;7.0.0,&gt;=5.6.1 in /usr/local/lib/python3.7/dist-packages (from datapane) (5.6.1)
+Requirement already satisfied: vega-datasets&lt;1.0.0,&gt;=0.9.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (0.9.0)
+Requirement already satisfied: requests&lt;3.0.0,&gt;=2.19.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (2.23.0)
+Requirement already satisfied: Jinja2&lt;4.0.0,&gt;=2.11.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (2.11.3)
+Requirement already satisfied: importlib_resources&lt;6.0.0,&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (5.4.0)
+Collecting colorlog&lt;7.0.0,&gt;=4.1.0
+  Downloading colorlog-6.6.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: toolz&lt;0.12.0,&gt;=0.11.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (0.11.2)
+Collecting click-spinner&lt;0.2.0,&gt;=0.1.8
+  Downloading click_spinner-0.1.10-py2.py3-none-any.whl (4.0 kB)
+Requirement already satisfied: click&lt;9.0.0,&gt;=7.1.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (7.1.2)
+Collecting posthog&lt;2.0.0,&gt;=1.4.0
+  Downloading posthog-1.4.4-py2.py3-none-any.whl (22 kB)
+Collecting dominate&lt;3.0.0,&gt;=2.4.0
+  Downloading dominate-2.6.0-py2.py3-none-any.whl (29 kB)
+Requirement already satisfied: packaging&lt;22.0.0,&gt;=20.0.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (21.3)
+Collecting boltons&lt;22.0.0,&gt;=20.0.0
+  Downloading boltons-21.0.0-py2.py3-none-any.whl (193 kB)
+     |████████████████████████████████| 193 kB 54.0 MB/s 
+Collecting pydantic&lt;2.0.0,&gt;=1.6.0
+  Downloading pydantic-1.8.2-cp37-cp37m-manylinux2014_x86_64.whl (10.1 MB)
+     |████████████████████████████████| 10.1 MB 49.5 MB/s 
+Collecting furl&lt;3.0.0,&gt;=2.0.0
+  Downloading furl-2.1.3-py2.py3-none-any.whl (20 kB)
+Collecting validators&lt;0.19.0,&gt;=0.18.0
+  Downloading validators-0.18.2-py3-none-any.whl (19 kB)
+Collecting micawber&gt;=0.5.0
+  Downloading micawber-0.5.4.tar.gz (18 kB)
+Requirement already satisfied: altair&lt;5.0.0,&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (4.1.0)
+Requirement already satisfied: tabulate&lt;0.9.0,&gt;=0.8.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (0.8.9)
+Collecting datacommons&lt;2.0.0,&gt;=1.4.3
+  Downloading datacommons-1.4.3-py3-none-any.whl (46 kB)
+     |████████████████████████████████| 46 kB 3.9 MB/s 
+Requirement already satisfied: pandas&lt;2.0.0,&gt;=1.1.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (1.1.5)
+Collecting dacite&lt;2.0.0,&gt;=1.0.2
+  Downloading dacite-1.6.0-py3-none-any.whl (12 kB)
+Requirement already satisfied: chardet&lt;5.0.0,&gt;=3.0.4 in /usr/local/lib/python3.7/dist-packages (from datapane) (3.0.4)
+Collecting PyYAML&lt;7.0.0,&gt;=6.0.0
+  Downloading PyYAML-6.0-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (596 kB)
+     |████████████████████████████████| 596 kB 39.1 MB/s 
+Collecting requests-toolbelt&lt;0.10.0,&gt;=0.9.1
+  Downloading requests_toolbelt-0.9.1-py2.py3-none-any.whl (54 kB)
+     |████████████████████████████████| 54 kB 2.8 MB/s 
+Requirement already satisfied: lxml&lt;5.0.0,&gt;=4.0.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (4.2.6)
+Collecting glom&lt;21.0.0,&gt;=20.5.0
+  Downloading glom-20.11.0-py2.py3-none-any.whl (97 kB)
+     |████████████████████████████████| 97 kB 7.6 MB/s 
+Requirement already satisfied: pyarrow&lt;6.0.0,&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from datapane) (3.0.0)
+Collecting stringcase&lt;2.0.0,&gt;=1.2.0
+  Downloading stringcase-1.2.0.tar.gz (3.0 kB)
+Requirement already satisfied: entrypoints in /usr/local/lib/python3.7/dist-packages (from altair&lt;5.0.0,&gt;=4.0.0-&gt;datapane) (0.3)
+Requirement already satisfied: numpy in /usr/local/lib/python3.7/dist-packages (from altair&lt;5.0.0,&gt;=4.0.0-&gt;datapane) (1.19.5)
+Requirement already satisfied: six in /usr/local/lib/python3.7/dist-packages (from datacommons&lt;2.0.0,&gt;=1.4.3-&gt;datapane) (1.15.0)
+Collecting orderedmultidict&gt;=1.0.1
+  Downloading orderedmultidict-1.0.1-py2.py3-none-any.whl (11 kB)
+Collecting face&gt;=20.1.0
+  Downloading face-20.1.1.tar.gz (46 kB)
+     |████████████████████████████████| 46 kB 3.9 MB/s 
+Requirement already satisfied: attrs in /usr/local/lib/python3.7/dist-packages (from glom&lt;21.0.0,&gt;=20.5.0-&gt;datapane) (21.2.0)
+Requirement already satisfied: zipp&gt;=3.1.0 in /usr/local/lib/python3.7/dist-packages (from importlib_resources&lt;6.0.0,&gt;=3.0.0-&gt;datapane) (3.6.0)
+Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.7/dist-packages (from Jinja2&lt;4.0.0,&gt;=2.11.0-&gt;datapane) (2.0.1)
+Requirement already satisfied: typing-extensions in /usr/local/lib/python3.7/dist-packages (from jsonschema&lt;5.0.0,&gt;=3.2.0-&gt;datapane) (3.10.0.2)
+Requirement already satisfied: importlib-metadata in /usr/local/lib/python3.7/dist-packages (from jsonschema&lt;5.0.0,&gt;=3.2.0-&gt;datapane) (4.8.2)
+Requirement already satisfied: pyrsistent!=0.17.0,!=0.17.1,!=0.17.2,&gt;=0.14.0 in /usr/local/lib/python3.7/dist-packages (from jsonschema&lt;5.0.0,&gt;=3.2.0-&gt;datapane) (0.18.0)
+Requirement already satisfied: traitlets&gt;=4.2 in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (5.1.1)
+Requirement already satisfied: jupyter-core in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (4.9.1)
+Requirement already satisfied: bleach in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (4.1.0)
+Requirement already satisfied: pygments in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (2.6.1)
+Requirement already satisfied: defusedxml in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (0.7.1)
+Requirement already satisfied: mistune&lt;2,&gt;=0.8.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (0.8.4)
+Requirement already satisfied: nbformat&gt;=4.4 in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (5.1.3)
+Requirement already satisfied: testpath in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (0.5.0)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /usr/local/lib/python3.7/dist-packages (from nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (1.5.0)
+Requirement already satisfied: ipython-genutils in /usr/local/lib/python3.7/dist-packages (from nbformat&gt;=4.4-&gt;nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (0.2.0)
+Requirement already satisfied: pyparsing!=3.0.5,&gt;=2.0.2 in /usr/local/lib/python3.7/dist-packages (from packaging&lt;22.0.0,&gt;=20.0.0-&gt;datapane) (3.0.6)
+Requirement already satisfied: python-dateutil&gt;=2.7.3 in /usr/local/lib/python3.7/dist-packages (from pandas&lt;2.0.0,&gt;=1.1.0-&gt;datapane) (2.8.2)
+Requirement already satisfied: pytz&gt;=2017.2 in /usr/local/lib/python3.7/dist-packages (from pandas&lt;2.0.0,&gt;=1.1.0-&gt;datapane) (2018.9)
+Collecting backoff&lt;2.0.0,&gt;=1.10.0
+  Downloading backoff-1.11.1-py2.py3-none-any.whl (13 kB)
+Collecting monotonic&gt;=1.5
+  Downloading monotonic-1.6-py2.py3-none-any.whl (8.2 kB)
+Requirement already satisfied: idna&lt;3,&gt;=2.5 in /usr/local/lib/python3.7/dist-packages (from requests&lt;3.0.0,&gt;=2.19.0-&gt;datapane) (2.10)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in /usr/local/lib/python3.7/dist-packages (from requests&lt;3.0.0,&gt;=2.19.0-&gt;datapane) (1.24.3)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.7/dist-packages (from requests&lt;3.0.0,&gt;=2.19.0-&gt;datapane) (2021.10.8)
+Requirement already satisfied: decorator&gt;=3.4.0 in /usr/local/lib/python3.7/dist-packages (from validators&lt;0.19.0,&gt;=0.18.0-&gt;datapane) (4.4.2)
+Requirement already satisfied: webencodings in /usr/local/lib/python3.7/dist-packages (from bleach-&gt;nbconvert&lt;7.0.0,&gt;=5.6.1-&gt;datapane) (0.5.1)
+Building wheels for collected packages: face, micawber, stringcase
+  Building wheel for face (setup.py) ... done
+  Created wheel for face: filename=face-20.1.1-py3-none-any.whl size=51091 sha256=383ccf7ef189943033e2804ac3b91537aece93ca28b14d9aa30eaff9fb0791aa
+  Stored in directory: /root/.cache/pip/wheels/67/03/c2/76d2e1e694852ce409ac2938b9f461bc0fdf3789901e7bb1f0
+  Building wheel for micawber (setup.py) ... done
+  Created wheel for micawber: filename=micawber-0.5.4-py3-none-any.whl size=22373 sha256=29fead50b48dc33c888c8eab46e8263449aba1ee38674b1e59524ea45e7523eb
+  Stored in directory: /root/.cache/pip/wheels/c1/b6/81/f8237c6061ac239fe1079fa35b445460b5ed090f5267fa3a37
+  Building wheel for stringcase (setup.py) ... done
+  Created wheel for stringcase: filename=stringcase-1.2.0-py3-none-any.whl size=3587 sha256=38e99706f49328f61542bfb8f119937209adf5fb4b64d78f66e7a64a924de268
+  Stored in directory: /root/.cache/pip/wheels/86/ab/a3/a8fa7e0a07e80f547e03468c03827f8257f7339327986faed1
+Successfully built face micawber stringcase
+Installing collected packages: jsonschema, boltons, orderedmultidict, monotonic, face, backoff, validators, stringcase, requests-toolbelt, PyYAML, pydantic, posthog, munch, micawber, glom, furl, dominate, datacommons-pandas, datacommons, dacite, colorlog, click-spinner, datapane
+  Attempting uninstall: jsonschema
+    Found existing installation: jsonschema 2.6.0
+    Uninstalling jsonschema-2.6.0:
+      Successfully uninstalled jsonschema-2.6.0
+  Attempting uninstall: PyYAML
+    Found existing installation: PyYAML 3.13
+    Uninstalling PyYAML-3.13:
+      Successfully uninstalled PyYAML-3.13
+<span class="ansi-red-fg">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+nbclient 0.5.9 requires jupyter-client&gt;=6.1.5, but you have jupyter-client 5.3.5 which is incompatible.</span>
+Successfully installed PyYAML-6.0 backoff-1.11.1 boltons-21.0.0 click-spinner-0.1.10 colorlog-6.6.0 dacite-1.6.0 datacommons-1.4.3 datacommons-pandas-0.0.3 datapane-0.13.1 dominate-2.6.0 face-20.1.1 furl-2.1.3 glom-20.11.0 jsonschema-4.3.2 micawber-0.5.4 monotonic-1.6 munch-2.5.0 orderedmultidict-1.0.1 posthog-1.4.4 pydantic-1.8.2 requests-toolbelt-0.9.1 stringcase-1.2.0 validators-0.18.2
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">datapane</span> <span class="k">as</span> <span class="nn">dp</span>
+<span class="err">!</span><span class="n">datapane</span> <span class="n">login</span> <span class="o">--</span><span class="n">token</span><span class="o">=</span><span class="mi">549</span><span class="n">d3e9535f3536e2cf3a6a8aab0d83ac3dbd4d4</span>
+
+<span class="n">report</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">Report</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">fig</span><span class="p">),</span> <span class="n">dp</span><span class="o">.</span><span class="n">DataTable</span><span class="p">(</span><span class="n">df</span><span class="p">))</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Spec Daily Deposit&#39;</span><span class="p">)</span> <span class="c1">#Create a report</span>
+<span class="n">report_2</span> <span class="o">=</span> <span class="n">dp</span><span class="o">.</span><span class="n">Report</span><span class="p">(</span><span class="n">dp</span><span class="o">.</span><span class="n">Plot</span><span class="p">(</span><span class="n">fig_2</span><span class="p">),</span> <span class="n">dp</span><span class="o">.</span><span class="n">DataTable</span><span class="p">(</span><span class="n">monthly</span><span class="p">))</span><span class="o">.</span><span class="n">upload</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Spec Monthly Deposit&#39;</span><span class="p">)</span> <span class="c1">#Create a report</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-green-fg">Connected successfully to https://datapane.com as zefwow</span>
+Uploading report and associated data - *please wait...*
+Your report only contains a single element - did you know you can include additional plots, tables and text in a single report? More info at https://docs.datapane.com/reports/blocks/layout-pages-and-selects
+Report successfully uploaded. View and share your report at https://datapane.com/u/zefwow/reports/0kz9N97/spec-daily-deposit/, or edit your report at https://datapane.com/u/zefwow/reports/0kz9N97/spec-daily-deposit/edit/.
+Uploading report and associated data - *please wait...*
+Your report only contains a single element - did you know you can include additional plots, tables and text in a single report? More info at https://docs.datapane.com/reports/blocks/layout-pages-and-selects
+Report successfully uploaded. View and share your report at https://datapane.com/u/zefwow/reports/43gPOj7/spec-monthly-deposit/, or edit your report at https://datapane.com/u/zefwow/reports/43gPOj7/spec-monthly-deposit/edit/.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="126.-[Hard]-Liquidation-Risks">126. [Hard] Liquidation Risks<a class="anchor-link" href="#126.-[Hard]-Liquidation-Risks"> </a></h1><p>Explore the worst-case scenarios for liquidation on Anchor. When have the most liquidations occurred, how much, and how many users were impacted? Under what scenarios might significant liquidations occur again?</p>
+<p><strong>Introduction</strong></p>
+<p>In this notebook, we'll hone in on <a href="https://www.anchorprotocol.com/">Anchor Protocol</a> liquidations. I'll start by taking a look at the state of the protocol with respect to</p>
+<h3 id="Method">Method<a class="anchor-link" href="#Method"> </a></h3><p>I looked at the Anchor overseer contract: <code>terra1tmnqgvg567ypvsvk6rwsga3srp7e3lg6u0elp8</code> and looked specificially at wher the action had a liquidation clause in it to identify liquidations.</p>
+<p>Prices of Luna were taken from the <code>terra.oracle_prices</code> table on Flipside Crypto.</p>
+<p><strong>Data View</strong></p>
+<p>We can first look at the data that we have:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Liquidations will vary by the LTV selected by the borrower but we can assume that big spikes will liquidate more wallets.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;zefwow&#39;</span> <span class="c1"># your username</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;70BeKhRYizEGFoxrZNqw&#39;</span> <span class="c1"># your api key - go to profile &gt; settings &gt; regenerate key</span>
+
+<span class="n">chart_studio</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">set_credentials_file</span><span class="p">(</span><span class="n">username</span><span class="o">=</span><span class="n">username</span><span class="p">,</span> <span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">chart_studio.plotly</span> <span class="k">as</span> <span class="nn">py</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">chart_studio</span><span class="o">.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">py</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;bLuna Liquidations on Anchor and Luna Price&#39;</span><span class="p">,</span> <span class="n">auto_open</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">PlotlyRequestError</span>                        Traceback (most recent call last)
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/plotly/plotly.py</span> in <span class="ansi-cyan-fg">_create_or_update</span><span class="ansi-blue-fg">(data, filetype)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1462</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1463</span><span class="ansi-red-fg">             </span>lookup_res <span class="ansi-blue-fg">=</span> v2<span class="ansi-blue-fg">.</span>files<span class="ansi-blue-fg">.</span>lookup<span class="ansi-blue-fg">(</span>filename<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1464</span>             <span class="ansi-green-fg">if</span> isinstance<span class="ansi-blue-fg">(</span>lookup_res<span class="ansi-blue-fg">.</span>content<span class="ansi-blue-fg">,</span> bytes<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/files.py</span> in <span class="ansi-cyan-fg">lookup</span><span class="ansi-blue-fg">(path, parent, user, exists)</span>
+<span class="ansi-green-intense-fg ansi-bold">     84</span>     params <span class="ansi-blue-fg">=</span> make_params<span class="ansi-blue-fg">(</span>path<span class="ansi-blue-fg">=</span>path<span class="ansi-blue-fg">,</span> parent<span class="ansi-blue-fg">=</span>parent<span class="ansi-blue-fg">,</span> user<span class="ansi-blue-fg">=</span>user<span class="ansi-blue-fg">,</span> exists<span class="ansi-blue-fg">=</span>exists<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 85</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> request<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;get&#34;</span><span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">,</span> params<span class="ansi-blue-fg">=</span>params<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">wrapped_f</span><span class="ansi-blue-fg">(*args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">     48</span>             <span class="ansi-green-fg">def</span> wrapped_f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 49</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> Retrying<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>dargs<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>dkw<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>call<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     50</span> 
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    205</span>             <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>should_reject<span class="ansi-blue-fg">(</span>attempt<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 206</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> attempt<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_wrap_exception<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    207</span> 
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-fg">(self, wrap_exception)</span>
+<span class="ansi-green-intense-fg ansi-bold">    246</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 247</span><span class="ansi-red-fg">                 </span>six<span class="ansi-blue-fg">.</span>reraise<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    248</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/six.py</span> in <span class="ansi-cyan-fg">reraise</span><span class="ansi-blue-fg">(tp, value, tb)</span>
+<span class="ansi-green-intense-fg ansi-bold">    702</span>                 <span class="ansi-green-fg">raise</span> value<span class="ansi-blue-fg">.</span>with_traceback<span class="ansi-blue-fg">(</span>tb<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 703</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> value
+<span class="ansi-green-intense-fg ansi-bold">    704</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    199</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 200</span><span class="ansi-red-fg">                 </span>attempt <span class="ansi-blue-fg">=</span> Attempt<span class="ansi-blue-fg">(</span>fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> attempt_number<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    201</span>             <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/utils.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-fg">(method, url, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    179</span>         <span class="ansi-green-fg">raise</span> exceptions<span class="ansi-blue-fg">.</span>PlotlyRequestError<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">,</span> status_code<span class="ansi-blue-fg">,</span> content<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 180</span><span class="ansi-red-fg">     </span>validate_response<span class="ansi-blue-fg">(</span>response<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/utils.py</span> in <span class="ansi-cyan-fg">validate_response</span><span class="ansi-blue-fg">(response)</span>
+<span class="ansi-green-intense-fg ansi-bold">     81</span> 
+<span class="ansi-green-fg">---&gt; 82</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> exceptions<span class="ansi-blue-fg">.</span>PlotlyRequestError<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">,</span> status_code<span class="ansi-blue-fg">,</span> content<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span> 
+
+<span class="ansi-red-fg">PlotlyRequestError</span>: Not found.
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">PlotlyRequestError</span>                        Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-28-9fb75f4d70d4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> 
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>py<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>fig<span class="ansi-blue-fg">,</span> filename<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;bLuna Liquidations on Anchor and Luna Price&#39;</span><span class="ansi-blue-fg">,</span> auto_open<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/plotly/plotly.py</span> in <span class="ansi-cyan-fg">plot</span><span class="ansi-blue-fg">(figure_or_data, validate, **plot_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    284</span>         payload<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;figure&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> figure
+<span class="ansi-green-intense-fg ansi-bold">    285</span> 
+<span class="ansi-green-fg">--&gt; 286</span><span class="ansi-red-fg">     </span>file_info <span class="ansi-blue-fg">=</span> _create_or_update<span class="ansi-blue-fg">(</span>payload<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;plot&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    287</span> 
+<span class="ansi-green-intense-fg ansi-bold">    288</span>     <span class="ansi-red-fg"># Compute viewing URL</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/plotly/plotly.py</span> in <span class="ansi-cyan-fg">_create_or_update</span><span class="ansi-blue-fg">(data, filetype)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1486</span> 
+<span class="ansi-green-intense-fg ansi-bold">   1487</span>         <span class="ansi-green-fg">except</span> exceptions<span class="ansi-blue-fg">.</span>PlotlyRequestError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">-&gt; 1488</span><span class="ansi-red-fg">             </span>res <span class="ansi-blue-fg">=</span> api_module<span class="ansi-blue-fg">.</span>create<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1489</span>     <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   1490</span>         res <span class="ansi-blue-fg">=</span> api_module<span class="ansi-blue-fg">.</span>create<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/plots.py</span> in <span class="ansi-cyan-fg">create</span><span class="ansi-blue-fg">(body)</span>
+<span class="ansi-green-intense-fg ansi-bold">     16</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">     17</span>     url <span class="ansi-blue-fg">=</span> build_url<span class="ansi-blue-fg">(</span>RESOURCE<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 18</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> request<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;post&#34;</span><span class="ansi-blue-fg">,</span> url<span class="ansi-blue-fg">,</span> json<span class="ansi-blue-fg">=</span>body<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     19</span> 
+<span class="ansi-green-intense-fg ansi-bold">     20</span> 
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">wrapped_f</span><span class="ansi-blue-fg">(*args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">     47</span>             <span class="ansi-blue-fg">@</span>six<span class="ansi-blue-fg">.</span>wraps<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     48</span>             <span class="ansi-green-fg">def</span> wrapped_f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 49</span><span class="ansi-red-fg">                 </span><span class="ansi-green-fg">return</span> Retrying<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>dargs<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>dkw<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>call<span class="ansi-blue-fg">(</span>f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kw<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     50</span> 
+<span class="ansi-green-intense-fg ansi-bold">     51</span>             <span class="ansi-green-fg">return</span> wrapped_f
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    210</span>                 <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_wrap_exception <span class="ansi-green-fg">and</span> attempt<span class="ansi-blue-fg">.</span>has_exception<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    211</span>                     <span class="ansi-red-fg"># get() on an attempt with an exception should cause it to be raised, but raise just in case</span>
+<span class="ansi-green-fg">--&gt; 212</span><span class="ansi-red-fg">                     </span><span class="ansi-green-fg">raise</span> attempt<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    213</span>                 <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    214</span>                     <span class="ansi-green-fg">raise</span> RetryError<span class="ansi-blue-fg">(</span>attempt<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">get</span><span class="ansi-blue-fg">(self, wrap_exception)</span>
+<span class="ansi-green-intense-fg ansi-bold">    245</span>                 <span class="ansi-green-fg">raise</span> RetryError<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    246</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 247</span><span class="ansi-red-fg">                 </span>six<span class="ansi-blue-fg">.</span>reraise<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>value<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    248</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    249</span>             <span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>value
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/six.py</span> in <span class="ansi-cyan-fg">reraise</span><span class="ansi-blue-fg">(tp, value, tb)</span>
+<span class="ansi-green-intense-fg ansi-bold">    701</span>             <span class="ansi-green-fg">if</span> value<span class="ansi-blue-fg">.</span>__traceback__ <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> tb<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    702</span>                 <span class="ansi-green-fg">raise</span> value<span class="ansi-blue-fg">.</span>with_traceback<span class="ansi-blue-fg">(</span>tb<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 703</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">raise</span> value
+<span class="ansi-green-intense-fg ansi-bold">    704</span>         <span class="ansi-green-fg">finally</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    705</span>             value <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">None</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/retrying.py</span> in <span class="ansi-cyan-fg">call</span><span class="ansi-blue-fg">(self, fn, *args, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    198</span>         <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    199</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 200</span><span class="ansi-red-fg">                 </span>attempt <span class="ansi-blue-fg">=</span> Attempt<span class="ansi-blue-fg">(</span>fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> attempt_number<span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    201</span>             <span class="ansi-green-fg">except</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>                 tb <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>exc_info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/utils.py</span> in <span class="ansi-cyan-fg">request</span><span class="ansi-blue-fg">(method, url, **kwargs)</span>
+<span class="ansi-green-intense-fg ansi-bold">    178</span>         content <span class="ansi-blue-fg">=</span> response<span class="ansi-blue-fg">.</span>content <span class="ansi-green-fg">if</span> response <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">&#34;No content&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    179</span>         <span class="ansi-green-fg">raise</span> exceptions<span class="ansi-blue-fg">.</span>PlotlyRequestError<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">,</span> status_code<span class="ansi-blue-fg">,</span> content<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">--&gt; 180</span><span class="ansi-red-fg">     </span>validate_response<span class="ansi-blue-fg">(</span>response<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    181</span>     <span class="ansi-green-fg">return</span> response
+
+<span class="ansi-green-fg">/usr/local/lib/python3.7/dist-packages/chart_studio/api/v2/utils.py</span> in <span class="ansi-cyan-fg">validate_response</span><span class="ansi-blue-fg">(response)</span>
+<span class="ansi-green-intense-fg ansi-bold">     80</span>         message <span class="ansi-blue-fg">=</span> content <span class="ansi-green-fg">if</span> content <span class="ansi-green-fg">else</span> <span class="ansi-blue-fg">&#34;No Content&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">     81</span> 
+<span class="ansi-green-fg">---&gt; 82</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> exceptions<span class="ansi-blue-fg">.</span>PlotlyRequestError<span class="ansi-blue-fg">(</span>message<span class="ansi-blue-fg">,</span> status_code<span class="ansi-blue-fg">,</span> content<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     83</span> 
+<span class="ansi-green-intense-fg ansi-bold">     84</span> 
+
+<span class="ansi-red-fg">PlotlyRequestError</span>: Hi there, you&#39;ve reached the threshold of 100 combined image exports and chart saves per 24h period. If you need to raise your daily limit, please consider upgrading to a paid plan.</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is really interesting. We can see liquidation spikes in April-May 2021 with small drops in price. Then a HUGE drop in May as the price of Luna went from about 15 all the way down to 5...a 66% drop - in line with the May crash that wiped out a lot of the crypto market. We can see that on the 23rd May 22k liquidation contracts were executed! Let's look at how many were executed on average for reference:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;NO_OF_LIQUIDATIONS&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>336.8109243697479</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's look at that breakdown by month:</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-python"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;DT_DAY&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%B&#39;</span><span class="p">))[</span><span class="s1">&#39;NO_OF_LIQUIDATIONS&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>date
+March          624
+October        745
+June          1087
+November      1343
+September     1447
+December      3039
+August        3875
+April         6450
+July         15336
+May          46215
+Name: NO_OF_LIQUIDATIONS, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So the average was 336 liquidations per day, but on this day there were 65x more. We can see a peak in August which doesn't seem to line up with a drop in Luna - this might be bETH liquidations that have come through. Otherwise we can see a small amount of liquidations on 4th December.</p>
+<p><strong>Conclusion</strong></p>
+<p>Throughout the year, March-April looked okay in terms of liquidations but the May crash had a huge uptick on number of liquidations iwth over 45000 contracts being executed in May.</p>
+<p>Since then, Luna has been doing well and the number of liqudations has been relatively low with sub-2000 liquidations in September, October and Novermber. When Luna does well, liquidations are few - when Luna crashes - liquidations rise.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="YusefAN/misc_analytics"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/misc_analytics/fastpages/jupyter/2021/12/29/SPEC_Analysis.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/misc_analytics/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/misc_analytics/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/misc_analytics/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/misc_analytics/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/misc_analytics/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
